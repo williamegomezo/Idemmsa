@@ -486,6 +486,8 @@ h5, h6, .small {
     width: 100%; } }
 
 .aws-sld__bullets {
+  position: relative;
+  z-index: 5;
   padding: 0; }
 
 .aws-sld__bullets button {
@@ -521,6 +523,9 @@ h5, h6, .small {
 
 .aws-sld__controls__arrow-left::before {
   background: #0F6680; }
+
+.aws-btn {
+  --slider-transition-duration: 200ms; }
 
 .loader-wrapper {
   width: 148px;
@@ -889,17 +894,6 @@ h5, h6, .small {
         transition: filter .25s ease-in-out; }
         .specialties__figure:hover {
           filter: invert(50%); } }
-.history {
-  padding: 16px; }
-  @media screen and (min-width: 1024px) {
-    .history {
-      padding: 0; } }
-  .history__container {
-    padding: 32px 0 16px;
-    border-bottom: 1px solid #F5F5F5;
-    margin-bottom: 32px; }
-  .history__subtitle {
-    color: #53575A; }
 .about {
   display: grid;
   grid-gap: 32px; }
@@ -917,6 +911,17 @@ h5, h6, .small {
   .about__text {
     opacity: .9;
     margin-bottom: 8px; }
+.history {
+  padding: 16px; }
+  @media screen and (min-width: 1024px) {
+    .history {
+      padding: 0; } }
+  .history__container {
+    padding: 32px 0 16px;
+    border-bottom: 1px solid #F5F5F5;
+    margin-bottom: 32px; }
+  .history__subtitle {
+    color: #53575A; }
 .banner {
   position: relative;
   margin-bottom: 16px; }
@@ -1080,42 +1085,6 @@ h5, h6, .small {
         height: 12px;
         margin-right: 8px;
         opacity: .7; }
-.features {
-  margin-top: 32px;
-  position: relative; }
-  @media screen and (min-width: 640px) {
-    .features {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-gap: 16px; } }
-  .features__item {
-    position: relative;
-    padding: 32px 16px 16px;
-    margin: 0 16px;
-    margin-top: 48px;
-    margin-bottom: 32px;
-    border: 1px solid #F5F5F5;
-    box-shadow: 1px 1px 3px #F5F5F5; }
-    @media screen and (min-width: 640px) {
-      .features__item {
-        margin-top: 32px; } }
-  .features__title {
-    padding: 8px 0;
-    border-bottom: 1px solid #F5F5F5;
-    margin-bottom: 16px;
-    width: 100%;
-    text-align: center; }
-  @media screen and (min-width: 640px) {
-    .features__text {
-      text-align: center; } }
-  .features__img {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    left: 50%;
-    top: -25px;
-    transform: translate(-50%);
-    filter: drop-shadow(2px 1px 1px); }
 :root {
   --slider-items: 5;
   --slider-time: 12s; }
@@ -1161,6 +1130,42 @@ h5, h6, .small {
       .slider__content .slider__item .slider__img {
         width: 100%;
         object-fit: contain; }
+.features {
+  margin-top: 32px;
+  position: relative; }
+  @media screen and (min-width: 640px) {
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 16px; } }
+  .features__item {
+    position: relative;
+    padding: 32px 16px 16px;
+    margin: 0 16px;
+    margin-top: 48px;
+    margin-bottom: 32px;
+    border: 1px solid #F5F5F5;
+    box-shadow: 1px 1px 3px #F5F5F5; }
+    @media screen and (min-width: 640px) {
+      .features__item {
+        margin-top: 32px; } }
+  .features__title {
+    padding: 8px 0;
+    border-bottom: 1px solid #F5F5F5;
+    margin-bottom: 16px;
+    width: 100%;
+    text-align: center; }
+  @media screen and (min-width: 640px) {
+    .features__text {
+      text-align: center; } }
+  .features__img {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 50%;
+    top: -25px;
+    transform: translate(-50%);
+    filter: drop-shadow(2px 1px 1px); }
 .header {
   padding: 16px;
   position: fixed;
@@ -1227,9 +1232,11 @@ h5, h6, .small {
             z-index: 50;
             padding: 0.3em 0; } }
       .header .nav .menu__link {
-        color: #0F6680; }
+        color: #0F6680;
+        display: block; }
         @media screen and (min-width: 1024px) {
           .header .nav .menu__link {
+            display: inline;
             color: #53575A;
             transition: border-bottom .05s;
             padding-bottom: 8px; }
@@ -1321,7 +1328,8 @@ h5, h6, .small {
   background-size: cover;
   padding: 64px 16px;
   color: #fff;
-  clip-path: polygon(0 0, 100% 1%, 100% 98%, 0 100%); }
+  clip-path: polygon(0 0, 100% 1%, 100% 98%, 0 100%);
+  margin-top: 32px; }
   @media screen and (min-width: 1024px) {
     .about-index {
       padding: 96px 0;
