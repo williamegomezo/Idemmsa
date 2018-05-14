@@ -1,28 +1,32 @@
-.grid__title {
-  padding: 0 8px;
-  text-align: center; }
-
-.grid__container {
-  display: grid;
-  width: 100%;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 4px;
-  margin-top: 16px; }
-  @media screen and (min-width: 640px) {
-    .grid__container {
-      grid-template-columns: repeat(4, 1fr); } }
+.areas {
+  padding: 16px; }
   @media screen and (min-width: 1024px) {
-    .grid__container {
-      grid-template-columns: repeat(5, 1fr); } }
-  .grid__container .grid__figure {
-    width: 100%;
-    margin: 0 auto; }
-  .grid__container .grid__img {
-    object-fit: cover;
-    height: 200px; }
-    @media screen and (min-width: 1024px) {
-      .grid__container .grid__img {
-        height: 250px; } }
+    .areas {
+      padding: 32px 0 16px; } }
+  @media screen and (min-width: 640px) {
+    .areas__copy {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 32px; } }
+  @media screen and (min-width: 1024px) {
+    .areas__copy {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 100px;
+      margin-top: 32px; } }
+  .areas__title {
+    padding: 8px 0;
+    border-bottom: 1px solid #F5F5F5;
+    margin-bottom: 16px;
+    width: 100%; }
+  .areas__item {
+    padding: 8px;
+    background: #0F6680;
+    margin-bottom: 16px;
+    border-radius: 3px; }
+  .areas__subtitle {
+    color: #fff;
+    text-align: center; }
 .aws-sld__box, .aws-sld__container figure, .aws-sld__content {
   display: block;
   position: absolute;
@@ -527,6 +531,12 @@ h5, h6, .small {
 .aws-btn {
   --slider-transition-duration: 200ms; }
 
+.aws-sld {
+  --slider-transition-duration: 200ms; }
+
+.aws-sld--animated {
+  transition: 200ms; }
+
 .loader-wrapper {
   width: 148px;
   height: 100px;
@@ -911,6 +921,31 @@ h5, h6, .small {
   .about__text {
     opacity: .9;
     margin-bottom: 8px; }
+.grid__title {
+  padding: 0 8px;
+  text-align: center; }
+
+.grid__container {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 4px;
+  margin-top: 16px; }
+  @media screen and (min-width: 640px) {
+    .grid__container {
+      grid-template-columns: repeat(4, 1fr); } }
+  @media screen and (min-width: 1024px) {
+    .grid__container {
+      grid-template-columns: repeat(5, 1fr); } }
+  .grid__container .grid__figure {
+    width: 100%;
+    margin: 0 auto; }
+  .grid__container .grid__img {
+    object-fit: cover;
+    height: 200px; }
+    @media screen and (min-width: 1024px) {
+      .grid__container .grid__img {
+        height: 250px; } }
 .history {
   padding: 16px; }
   @media screen and (min-width: 1024px) {
@@ -953,37 +988,11 @@ h5, h6, .small {
   .banner__title {
     color: white;
     text-shadow: 0 2px 0 #282D31; }
-.areas {
-  padding: 16px; }
-  @media screen and (min-width: 1024px) {
-    .areas {
-      padding: 32px 0 16px; } }
-  @media screen and (min-width: 640px) {
-    .areas__copy {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-gap: 32px; } }
-  @media screen and (min-width: 1024px) {
-    .areas__copy {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-gap: 100px;
-      margin-top: 32px; } }
-  .areas__title {
-    padding: 8px 0;
-    border-bottom: 1px solid #F5F5F5;
-    margin-bottom: 16px;
-    width: 100%; }
-  .areas__item {
-    padding: 8px;
-    background: #0F6680;
-    margin-bottom: 16px;
-    border-radius: 3px; }
-  .areas__subtitle {
-    color: #fff;
-    text-align: center; }
 .strategy {
   padding: 16px; }
+  @media screen and (min-width: 1024px) {
+    .strategy {
+      padding: 0; } }
   @media screen and (min-width: 1024px) {
     .strategy__copy {
       display: grid;
@@ -1066,6 +1075,9 @@ h5, h6, .small {
 .works {
   position: relative;
   padding: 16px; }
+  @media screen and (min-width: 1024px) {
+    .works {
+      padding: 0; } }
   .works__title {
     padding: 8px 0;
     border-bottom: 1px solid #F5F5F5;
@@ -1087,17 +1099,17 @@ h5, h6, .small {
         opacity: .7; }
 :root {
   --slider-items: 5;
-  --slider-time: 12s; }
+  --slider-time: 8s; }
 
 .slider {
-  width: 250px;
-  height: 250px;
+  width: 350px;
+  height: 350px;
   margin: 0 auto;
   overflow: hidden; }
   @media screen and (min-width: 640px) {
     .slider {
-      width: 400px;
-      height: 400px; } }
+      width: 500px;
+      height: 500px; } }
   .slider__container {
     display: grid;
     margin: 0 auto; }
@@ -1120,16 +1132,59 @@ h5, h6, .small {
   44%, 64% {
     left: -200%; }
   66%, 86% {
-    left: -400%; }
+    left: -300%; }
   88%, 100% {
-    left: 0%; } }
+    left: -400%; } }
     .slider__content .slider__item {
       position: relative;
       width: 100%;
       height: 100%; }
       .slider__content .slider__item .slider__img {
         width: 100%;
-        object-fit: contain; }
+        object-fit: cover; }
+.contact__titles {
+  padding: 16px; }
+  @media screen and (min-width: 640px) {
+    .contact__titles {
+      padding: 16px 0; } }
+
+.contact__title {
+  padding: 16px 0;
+  border-bottom: 1px solid #F5F5F5; }
+  @media screen and (min-width: 640px) {
+    .contact__title {
+      padding: 16px 0 8px; } }
+
+.contact__copy {
+  padding: 16px; }
+  @media screen and (min-width: 640px) {
+    .contact__copy {
+      padding: 0; } }
+  .contact__copy .contact__text {
+    margin-top: 16px;
+    font-size: 15px; }
+  .contact__copy .contact__facebook {
+    color: #53575A;
+    position: relative; }
+    .contact__copy .contact__facebook::after {
+      content: url("https://image.flaticon.com/icons/svg/174/174848.svg");
+      width: 25px;
+      height: 25px;
+      position: absolute;
+      top: 0px;
+      margin-left: 8px;
+      cursor: pointer; }
+  .contact__copy .contact__instagram {
+    position: relative;
+    color: #53575A; }
+    .contact__copy .contact__instagram::after {
+      content: url("https://image.flaticon.com/icons/svg/174/174855.svg");
+      width: 25px;
+      height: 25px;
+      position: absolute;
+      top: 0px;
+      margin-left: 8px;
+      cursor: pointer; }
 .features {
   margin-top: 32px;
   position: relative; }
